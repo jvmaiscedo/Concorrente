@@ -8,115 +8,106 @@
  * @author jvmaiscedo
  */
 public class Trem {
-  
+
   private String Nome;
   private int posicaoX;
   private int posicaoY;
   private int velocidade;
   private int posicaoInicialX;
   private int posicaoInicialY;
-  
-  public Trem(int posX, int posY, int vel){
+
+  public Trem(int posX, int posY, int vel) {
     this.posicaoX = posX;
     this.posicaoY = posY;
     this.posicaoInicialX = posX;
-    this.posicaoInicialY= posY;
+    this.posicaoInicialY = posY;
     this.velocidade = vel;
   }
-  
-  public void movimento(int n){
-        
-   switch(n){
-     case 1:
-        if(posicaoY>=506 && posicaoY<552){
-          posicaoY-=velocidade;
-          System.out.println("if1"+ posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<506 && posicaoY>=385){
-          posicaoY-=velocidade;
-          if(posicaoX>=390){
-            posicaoX-=velocidade;
-          }
-          System.out.println("if2"+posicaoX+ " "+ posicaoY);
-        }
-        
-        else if(posicaoY<385 && posicaoY>=240){
-          posicaoY-=velocidade;
-          if(posicaoX<419){
-            posicaoX+=velocidade;
-          }
-          System.out.println("if3"+posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<240 && posicaoY>=128){
+
+  public void movimento(int n) {
+
+    switch (n) {
+      case 1:
+        if (posicaoY >= 506 && posicaoY < 552) {
           posicaoY -= velocidade;
-          if(posicaoX>=390){
-            posicaoX-=velocidade;
+          System.out.println("if1" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 506 && posicaoY >= 385) {
+          posicaoY -= velocidade;
+          if (posicaoX >= 390) {
+            posicaoX -= velocidade;
           }
-          
-          System.out.println("if4"+posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<128 && posicaoY>=-86){
-          posicaoY-=velocidade;
-          if(posicaoX<419){
-            posicaoX+=velocidade;
+          System.out.println("if2" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 385 && posicaoY >= 240) {
+          posicaoY -= velocidade;
+          if (posicaoX < 419) {
+            posicaoX += velocidade;
           }
-          System.out.println("if3"+posicaoX+ " "+ posicaoY);
-        }
-        else{
+          System.out.println("if3" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 240 && posicaoY >= 128) {
+          posicaoY -= velocidade;
+          if (posicaoX >= 390) {
+            posicaoX -= velocidade;
+          }
+
+          System.out.println("if4" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 128 && posicaoY >= -86) {
+          posicaoY -= velocidade;
+          if (posicaoX < 419) {
+            posicaoX += velocidade;
+          }
+          System.out.println("if3" + posicaoX + " " + posicaoY);
+        } else {
           posicaoX = posicaoInicialX;
           posicaoY = posicaoInicialY;
         }
         break;
-     case 2:
-        if(posicaoY>=506 && posicaoY<552){
-          posicaoY-=velocidade;
-          System.out.println("if1"+ posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<506 && posicaoY>=385){
-          posicaoY-=velocidade;
-          if(posicaoX<=373){
-            posicaoX+=velocidade;
-          }
-          System.out.println("if2"+posicaoX+ " "+ posicaoY);
-        }
-        
-        else if(posicaoY<385 && posicaoY>=240){
-          posicaoY-=velocidade;
-          if(posicaoX>=335){
-            posicaoX-=velocidade;
-          }
-          System.out.println("if3"+posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<240 && posicaoY>=128){
+      case 2:
+        if (posicaoY >= 506 && posicaoY < 552) {
           posicaoY -= velocidade;
-          if(posicaoX<=373){
-            posicaoX+=velocidade;
+          System.out.println("if1" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 506 && posicaoY >= 385) {
+          posicaoY -= velocidade;
+          if (posicaoX <= 373) {
+            posicaoX += velocidade;
           }
-          
-          System.out.println("if4"+posicaoX+ " "+ posicaoY);
-        }
-        else if(posicaoY<128 && posicaoY>=-86){
-          posicaoY-=velocidade;
-          if(posicaoX>=335){
-            posicaoX-=velocidade;
+          System.out.println("if2" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 385 && posicaoY >= 240) {
+          posicaoY -= velocidade;
+          if (posicaoX >= 335) {
+            posicaoX -= velocidade;
           }
-          System.out.println("if3"+posicaoX+ " "+ posicaoY);
-        }
-        else{
+          System.out.println("if3" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 240 && posicaoY >= 128) {
+          posicaoY -= velocidade;
+          if (posicaoX <= 373) {
+            posicaoX += velocidade;
+          }
+
+          System.out.println("if4" + posicaoX + " " + posicaoY);
+        } else if (posicaoY < 128 && posicaoY >= -86) {
+          posicaoY -= velocidade;
+          if (posicaoX >= 335) {
+            posicaoX -= velocidade;
+          }
+          System.out.println("if3" + posicaoX + " " + posicaoY);
+        } else {
           posicaoX = posicaoInicialX;
           posicaoY = posicaoInicialY;
         }
-       break;
+        break;
+    }
+
   }
-     
-  }
-  public int getPosicaoX(){
+
+  public int getPosicaoX() {
     return posicaoX;
   }
-  public int getPosicaoY(){
+
+  public int getPosicaoY() {
     return posicaoY;
   }
-  public void setVelocidade(int vel){
+
+  public void setVelocidade(int vel) {
     this.velocidade = vel;
   }
 }
