@@ -25,8 +25,9 @@ public class Trem {
   }
   
   public void movimento(int n){
-        System.out.println("inicio"+posicaoX+ " "+ posicaoY+" velocidade:"+velocidade);
-   
+        
+   switch(n){
+     case 1:
         if(posicaoY>=506 && posicaoY<552){
           posicaoY-=velocidade;
           System.out.println("if1"+ posicaoX+ " "+ posicaoY);
@@ -65,6 +66,48 @@ public class Trem {
           posicaoX = posicaoInicialX;
           posicaoY = posicaoInicialY;
         }
+        break;
+     case 2:
+        if(posicaoY>=506 && posicaoY<552){
+          posicaoY-=velocidade;
+          System.out.println("if1"+ posicaoX+ " "+ posicaoY);
+        }
+        else if(posicaoY<506 && posicaoY>=385){
+          posicaoY-=velocidade;
+          if(posicaoX<=373){
+            posicaoX+=velocidade;
+          }
+          System.out.println("if2"+posicaoX+ " "+ posicaoY);
+        }
+        
+        else if(posicaoY<385 && posicaoY>=240){
+          posicaoY-=velocidade;
+          if(posicaoX>=335){
+            posicaoX-=velocidade;
+          }
+          System.out.println("if3"+posicaoX+ " "+ posicaoY);
+        }
+        else if(posicaoY<240 && posicaoY>=128){
+          posicaoY -= velocidade;
+          if(posicaoX<=373){
+            posicaoX+=velocidade;
+          }
+          
+          System.out.println("if4"+posicaoX+ " "+ posicaoY);
+        }
+        else if(posicaoY<128 && posicaoY>=-86){
+          posicaoY-=velocidade;
+          if(posicaoX>=335){
+            posicaoX-=velocidade;
+          }
+          System.out.println("if3"+posicaoX+ " "+ posicaoY);
+        }
+        else{
+          posicaoX = posicaoInicialX;
+          posicaoY = posicaoInicialY;
+        }
+       break;
+  }
      
   }
   public int getPosicaoX(){

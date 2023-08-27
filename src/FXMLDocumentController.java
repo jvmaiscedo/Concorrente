@@ -27,36 +27,57 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Slider velocidadeDireito;
     @FXML
+    private Slider velocidadeEsquerdo;
+    @FXML
     private Button iniciarMovimento;
     @FXML
+    private ImageView trem1;
+    @FXML
     private ImageView trem2;
-    //int vel = (int) velocidadeDireito.getValue();
-    //Trem trem = new Trem(419,550,5);
     int n =0;
     @FXML
   
 private void iniciarMovimento(ActionEvent event) {
-      int vel = (int) velocidadeDireito.getValue();
-      Trem trem = new Trem(419,550, vel);
+      int vel1 = (int) velocidadeDireito.getValue();
+      int vel2 = (int) velocidadeEsquerdo.getValue();
+      Trem tremVermelho = new Trem(419,550, vel1);
+      Trem tremVerde = new Trem(335,550,vel2);
         Timeline timeline = new Timeline();
         
-        KeyFrame keyFrame = new KeyFrame(Duration.millis(20), e -> {
+        KeyFrame keyFrame1 = new KeyFrame(Duration.millis(20), e -> {
             if (n < 1000) {
-                trem.movimento(1);
-                trem2.setLayoutX(trem.getPosicaoX());
-                trem2.setLayoutY(trem.getPosicaoY());
+                tremVermelho.movimento(1);
+                trem2.setLayoutX(tremVermelho.getPosicaoX());
+                trem2.setLayoutY(tremVermelho.getPosicaoY());
                 n++;
-                trem.setVelocidade((int) velocidadeDireito.getValue());
+                tremVermelho.setVelocidade((int) velocidadeDireito.getValue());
             }
         });
         
-        timeline.getKeyFrames().add(keyFrame);
+        
+        timeline.getKeyFrames().add(keyFrame1);
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
+        
+        
+        KeyFrame keyFrame2 = new KeyFrame(Duration.millis(20), e -> {
+            if (n < 1000) {
+                tremVerde.movimento(2);
+                trem1.setLayoutX(tremVerde.getPosicaoX());
+                trem1.setLayoutY(tremVerde.getPosicaoY());
+                n++;
+                tremVerde.setVelocidade((int) velocidadeEsquerdo.getValue());
+            }
+        });
+        timeline.getKeyFrames().add(keyFrame2);
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+        
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
       velocidadeDireito.setValue(5);
+      velocidadeEsquerdo.setValue(5);
         
     }    
     
