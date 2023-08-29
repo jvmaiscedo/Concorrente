@@ -12,17 +12,17 @@
    <children>
       <ImageView fitHeight="820.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@img/Velocidade%201.png" />
+            <Image url="@../img/Velocidade%201.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="643.0" fitWidth="226.0" layoutX="335.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/trilhos.png" />
+            <Image url="@../img/trilhos.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="trem2" fitHeight="100.0" fitWidth="37.0" layoutX="419.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="trem2" fitHeight="58.0" fitWidth="40.0" layoutX="416.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/tremVermelho.png" />
+            <Image url="@../img/tremVermelho.png" />
          </image>
       </ImageView>
       <Slider fx:id="velocidadeDireito" layoutX="717.0" layoutY="711.0" max="10.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="16.0" />
@@ -36,9 +36,9 @@
             <Font name="DejaVu Sans Mono Bold" size="20.0" />
          </font>
       </Button>
-      <ImageView fx:id="trem1" fitHeight="94.0" fitWidth="54.0" layoutX="335.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="trem1" fitHeight="58.0" fitWidth="40.0" layoutX="348.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/tremVerde.png" />
+            <Image url="@../img/tremVerde.png" />
          </image>
       </ImageView>
       <RadioButton fx:id="cimaParaBaixo" layoutX="55.0" layoutY="690.0" mnemonicParsing="false" onAction="#posicao1" text="Cima para baixo" textFill="WHITE">

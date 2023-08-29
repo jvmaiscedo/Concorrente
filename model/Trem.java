@@ -1,4 +1,5 @@
 package model;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -29,31 +30,31 @@ public class Trem {
 
     switch (n) {
       case 1:
-        if (posicaoY >= 506 && posicaoY < 552) {
+        if (posicaoY >= 506 && posicaoY < 580) {
           posicaoY -= velocidade;
           
         } else if (posicaoY < 506 && posicaoY >= 385) {
           posicaoY -= velocidade;
-          if (posicaoX <= 373) {
+          if (posicaoX <= 385) {
             posicaoX += velocidade;
           }
           
         } else if (posicaoY < 385 && posicaoY >= 240) {
           posicaoY -= velocidade;
-          if (posicaoX >= 335) {
+          if (posicaoX >= 351) {
             posicaoX -= velocidade;
           }
           
         } else if (posicaoY < 240 && posicaoY >= 128) {
           posicaoY -= velocidade;
-          if (posicaoX <= 373) {
+          if (posicaoX <= 385) {
             posicaoX += velocidade;
           }
 
           
-        } else if (posicaoY < 128 && posicaoY >= -86) {
+        } else if (posicaoY < 128 && posicaoY >= -20) {
           posicaoY -= velocidade;
-          if (posicaoX >= 335) {
+          if (posicaoX >= 351) {
             posicaoX -= velocidade;
           }
           
@@ -64,29 +65,29 @@ public class Trem {
         
         break;
       case 2:
-        if (posicaoY >= 506 && posicaoY < 552) {
+        if (posicaoY >= 506 && posicaoY < 580) {
           posicaoY -= velocidade;
          
         } else if (posicaoY < 506 && posicaoY >= 385) {
           posicaoY -= velocidade;
-          if (posicaoX >= 390) {
+          if (posicaoX >= 385) {
             posicaoX -= velocidade;
           }
         
         } else if (posicaoY < 385 && posicaoY >= 240) {
           posicaoY -= velocidade;
-          if (posicaoX < 419) {
+          if (posicaoX < 412) {
             posicaoX += velocidade;
           }
          
         } else if (posicaoY < 240 && posicaoY >= 128) {
           posicaoY -= velocidade;
-          if (posicaoX >= 390) {
+          if (posicaoX >= 385) {
             posicaoX -= velocidade;
           }
-        } else if (posicaoY < 128 && posicaoY >= -86) {
+        } else if (posicaoY < 128 && posicaoY >= -20) {
           posicaoY -= velocidade;
-          if (posicaoX < 419) {
+          if (posicaoX < 412) {
             posicaoX += velocidade;
           }
           
@@ -97,31 +98,31 @@ public class Trem {
         
         break;
       case 3:
-         if (posicaoY >= 30 && posicaoY < 89) {
+         if (posicaoY >= 9 && posicaoY < 89) {
           posicaoY += velocidade;
           
         } else if (posicaoY >= 89 && posicaoY < 210) {
           posicaoY += velocidade;
-          if (posicaoX <= 373) {
+          if (posicaoX <= 385) {
             posicaoX += velocidade;
           }
           
         } else if (posicaoY >= 210 && posicaoY < 335) {
           posicaoY += velocidade;
-          if (posicaoX >= 335) {
+          if (posicaoX >= 351) {
             posicaoX -= velocidade;
           }
          
         } else if (posicaoY >= 335 && posicaoY < 458) {
           posicaoY += velocidade;
-          if (posicaoX <= 373) {
+          if (posicaoX <= 385) {
             posicaoX += velocidade;
           }
 
           
         } else if (posicaoY >= 458 && posicaoY < 580) {
           posicaoY += velocidade;
-          if (posicaoX >= 335) {
+          if (posicaoX >= 351) {
             posicaoX -= velocidade;
           }
           
@@ -132,31 +133,31 @@ public class Trem {
         break;
         
       case 4:
-         if (posicaoY >= 30 && posicaoY < 89) {
+         if (posicaoY >= 9 && posicaoY < 89) {
           posicaoY += velocidade;
           
         } else if (posicaoY >= 89 && posicaoY < 210) {
           posicaoY += velocidade;
-          if (posicaoX >= 390) {
+          if (posicaoX >= 385) {
             posicaoX -= velocidade;
           }
           
         } else if (posicaoY >= 210 && posicaoY < 335) {
           posicaoY += velocidade;
-          if (posicaoX <= 419) {
+          if (posicaoX <= 412) {
             posicaoX += velocidade;
           }
          
         } else if (posicaoY >= 335 && posicaoY < 458) {
           posicaoY += velocidade;
-          if (posicaoX >= 390) {
+          if (posicaoX >= 385) {
             posicaoX -= velocidade;
           }
 
           
         } else if (posicaoY >= 458 && posicaoY < 580) {
           posicaoY += velocidade;
-          if (posicaoX <= 419) {
+          if (posicaoX <= 412) {
             posicaoX += velocidade;
           }
           

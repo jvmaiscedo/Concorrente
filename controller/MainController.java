@@ -1,9 +1,12 @@
 package controller;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
  */
 
+import model.Coordenada;
+import model.Trem;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -16,8 +19,6 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-import model.Trem;
-import model.Coordenada;
 
 /**
  *
@@ -25,10 +26,10 @@ import model.Coordenada;
  */
 public class MainController implements Initializable {
 
-  Coordenada coordenada1 = new Coordenada(335, 550);
-  Coordenada coordenada2 = new Coordenada(419, 550);
-  Coordenada coordenada3 = new Coordenada(335, 30);
-  Coordenada coordenada4 = new Coordenada(419, 30);
+  Coordenada coordenada1 = new Coordenada(351, 560);
+  Coordenada coordenada2 = new Coordenada(412, 560);
+  Coordenada coordenada3 = new Coordenada(351, 10);
+  Coordenada coordenada4 = new Coordenada(412, 10);
   ArrayList<Coordenada> coordenadas = new ArrayList<>();
 
   @FXML
