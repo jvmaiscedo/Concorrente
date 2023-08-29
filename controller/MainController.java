@@ -1,9 +1,14 @@
-package controller;
+/* ***************************************************************
+* Autor............: Joao Victor Gomes Macedo
+* Matricula........: 202210166
+* Inicio...........: 25/08/2023
+* Ultima alteracao.: 29/08/2023
+* Nome.............: MainController
+* Funcao...........: Manipula os objetos da interface gráfica 
+		     e das classes modelo.
+*************************************************************** */
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
- */
+package controller;
 
 import model.Coordenada;
 import model.Trem;
@@ -20,18 +25,16 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-/**
- *
- * @author jvmaiscedo
- */
 public class MainController implements Initializable {
 
+  //Coordenadas iniciais possiveis dos trens.
   Coordenada coordenada1 = new Coordenada(351, 560);
   Coordenada coordenada2 = new Coordenada(412, 560);
   Coordenada coordenada3 = new Coordenada(351, 10);
   Coordenada coordenada4 = new Coordenada(412, 10);
   ArrayList<Coordenada> coordenadas = new ArrayList<>();
-
+  
+  //Elementos da interface associados a eventos.
   @FXML
   private Slider velocidadeDireito;
   @FXML
@@ -49,12 +52,10 @@ public class MainController implements Initializable {
   @FXML
   private RadioButton opostamenteInverso;
 
-  
-  
- 
+  //variaveis de controle
   boolean iniciou;
   private KeyFrame AnimacaoTremVermelho;
-  private KeyFrame AnimacaoTremVerde;
+  private KeyFrame AnimacaoTremVerde; 
   private Timeline timeline;
   private Trem tremVermelho;
   private Trem tremVerde;
@@ -65,16 +66,18 @@ public class MainController implements Initializable {
   private ActionEvent e;
   
   
-  
-  
-  
-
+  /* ***************************************************************
+  * Metodo: criarKeyFrames
+  * Funcao: Cria os KeyFrames para as animacoes dos trens.
+  * Parametros: Nenhum.
+  * Retorno: Sem retorno.
+  *************************************************************** */
   @FXML
   public void criarKeyFrames() {
-    int vel1 = (int) velocidadeDireito.getValue();
-    int vel2 = (int) velocidadeEsquerdo.getValue();
-    tremVerde = new Trem(coordenadas.get(coordenadaTremEsquerdo).getCoordenadaX(), coordenadas.get(coordenadaTremEsquerdo).getCoordenadaY(), vel2);
-    tremVermelho = new Trem(coordenadas.get(coordenadaTremDireito).getCoordenadaX(), coordenadas.get(coordenadaTremDireito).getCoordenadaY(), vel1);
+  
+  
+    tremVerde = new Trem(coordenadas.get(coordenadaTremEsquerdo).getCoordenadaX(), coordenadas.get(coordenadaTremEsquerdo).getCoordenadaY(), (int) velocidadeDireito.getValue());
+    tremVermelho = new Trem(coordenadas.get(coordenadaTremDireito).getCoordenadaX(), coordenadas.get(coordenadaTremDireito).getCoordenadaY(), (int) velocidadeEsquerdo.getValue());
 
     AnimacaoTremVerde = new KeyFrame(Duration.millis(20), e -> {
       if (iniciou) {
@@ -94,11 +97,17 @@ public class MainController implements Initializable {
       }
     });
 
-    timeline = new Timeline(); // Inicialize a timeline uma única vez
+    timeline = new Timeline(); 
     timeline.setCycleCount(Timeline.INDEFINITE);
-    timeline.getKeyFrames().addAll(AnimacaoTremVermelho, AnimacaoTremVerde);
+    timeline.getKeyFrames().addAll(AnimacaoTremVerde, AnimacaoTremVermelho);
   }
   
+  /* ***************************************************************
+  * Metodo: iniciarMovimento
+  * Funcao: Inicia a animacao dos trens e desabilita os botoes de direcao.
+  * Parametros: event - Evento associado ao clique no botão de iniciar.
+  * Retorno: Sem retorno.
+  *************************************************************** */
   @FXML
   public void iniciarMovimento(ActionEvent event) {
     cimaParaBaixo.setDisable(true);
@@ -106,13 +115,18 @@ public class MainController implements Initializable {
     opostamente.setDisable(true);
     opostamenteInverso.setDisable(true);
     if (!iniciou) {
-      criarKeyFrames(); // Crie as keyframes somente uma vez
+      criarKeyFrames();
       iniciou = true;
     }
-
-    // Resto do seu código...
     timeline.play();
   }
+  
+  /* ***************************************************************
+  * Metodo: resetarMovimento
+  * Funcao: Reseta a animacao dos trens e habilita os botoes de direcao.
+  * Parametros: e - Evento associado ao clique no botao de resetar.
+  * Retorno: Sem retorno.
+  *************************************************************** */
   @FXML
   public void resetarMovimento(ActionEvent e) {
     cimaParaBaixo.setDisable(false);
@@ -127,6 +141,13 @@ public class MainController implements Initializable {
     trem2.setLayoutY(coordenadas.get(coordenadaTremDireito).getCoordenadaY());
 
   }
+  
+  /* ***************************************************************
+  * Metodo: posicao1
+  * Funcao: Define a posição dos trens e o movimento para a posicao 1.
+  * Parametros: e - Evento associado ao clique no botão de posicao 1.
+  * Retorno: Sem retorno.
+  *************************************************************** */
   @FXML
   public void posicao1(ActionEvent e){
     baixoParaCima.setSelected(false);
@@ -144,6 +165,14 @@ public class MainController implements Initializable {
     trem2.setLayoutY(coordenadas.get(coordenadaTremDireito).getCoordenadaY());
     
   }
+  
+  /* ***************************************************************
+  * Metodo: posicao2
+  * Funcao: Define a posição dos trens e o movimento para a posicao 2.
+  * Parametros: e - Evento associado ao clique no botão de posicao 2.
+  * Retorno: Sem retorno.
+  *************************************************************** */
+  @FXML
   public void posicao2(ActionEvent e){
     cimaParaBaixo.setSelected(false);
     opostamente.setSelected(false);
@@ -160,6 +189,14 @@ public class MainController implements Initializable {
     trem2.setRotate(360);
     
   }
+  
+  /* ***************************************************************
+  * Metodo: posicao3
+  * Funcao: Define a posição dos trens e o movimento para a posicao 3.
+  * Parametros: e - Evento associado ao clique no botão de posicao 3.
+  * Retorno: Sem retorno.
+  *************************************************************** */
+  @FXML
   public void posicao3(ActionEvent e){
     cimaParaBaixo.setSelected(false);
     baixoParaCima.setSelected(false);
@@ -177,6 +214,14 @@ public class MainController implements Initializable {
       trem2.setRotate(360);
     }
   }
+  
+  /* ***************************************************************
+  * Metodo: posicao4
+  * Funcao: Define a posição dos trens e o movimento para a posicao 4.
+  * Parametros: e - Evento associado ao clique no botão de posicao 4.
+  * Retorno: Sem retorno.
+  *************************************************************** */
+  @FXML
   public void posicao4(ActionEvent e){
     cimaParaBaixo.setSelected(false);
     baixoParaCima.setSelected(false);
@@ -195,7 +240,14 @@ public class MainController implements Initializable {
     }
   }
   
- 
+  /* ***************************************************************
+  * Metodo: initialize
+  * Funcao: esta funcao inicia alguns atributos dos trens, bem como
+  	    velocidade default dos trens, coordenadas e movimento
+  	    previamente selecionado que realizara
+  * Parametros: padrao do java
+  * Retorno: sem retorno
+  *************************************************************** */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
     velocidadeDireito.setValue(5);
