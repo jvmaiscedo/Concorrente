@@ -76,8 +76,8 @@ public class MainController implements Initializable {
   public void criarKeyFrames() {
   
   
-    tremVerde = new Trem(coordenadas.get(coordenadaTremEsquerdo).getCoordenadaX(), coordenadas.get(coordenadaTremEsquerdo).getCoordenadaY(), (int) velocidadeDireito.getValue());
-    tremVermelho = new Trem(coordenadas.get(coordenadaTremDireito).getCoordenadaX(), coordenadas.get(coordenadaTremDireito).getCoordenadaY(), (int) velocidadeEsquerdo.getValue());
+    tremVerde = new Trem(coordenadas.get(coordenadaTremEsquerdo).getCoordenadaX(), coordenadas.get(coordenadaTremEsquerdo).getCoordenadaY(), (int) velocidadeEsquerdo.getValue());
+    tremVermelho = new Trem(coordenadas.get(coordenadaTremDireito).getCoordenadaX(), coordenadas.get(coordenadaTremDireito).getCoordenadaY(), (int) velocidadeDireito.getValue());
 
     AnimacaoTremVerde = new KeyFrame(Duration.millis(20), e -> {
       if (iniciou) {
