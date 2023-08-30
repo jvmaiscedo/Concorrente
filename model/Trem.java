@@ -3,7 +3,7 @@
 * Matricula........: 202210166
 * Inicio...........: 25/08/2023
 * Ultima alteracao.: 29/08/2023
-* Nome.............: Tre
+* Nome.............: Trem
 * Funcao...........: esta classe tem a funcao de criar o objeto
 		     do tipo Trem que, estando associado a uma
 		     imagem, alterara sua posicao e velocidade
@@ -26,7 +26,7 @@ public class Trem {
     this.velocidade = vel;
   }
   
-  /* ***************************************************************
+/* ***************************************************************
 * Metodo: movimento
 * Funcao: esta funcao incrementa as coordenadas (X,Y) do trem para 
 	  que ele se movimente sobre os trilhos corretamente.

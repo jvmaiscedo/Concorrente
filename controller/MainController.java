@@ -66,12 +66,12 @@ public class MainController implements Initializable {
   private ActionEvent e;
   
   
-  /* ***************************************************************
-  * Metodo: criarKeyFrames
-  * Funcao: Cria os KeyFrames para as animacoes dos trens.
-  * Parametros: Nenhum.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: criarKeyFrames
+* Funcao: Cria os KeyFrames para as animacoes dos trens.
+* Parametros: Nenhum.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void criarKeyFrames() {
   
@@ -102,12 +102,12 @@ public class MainController implements Initializable {
     timeline.getKeyFrames().addAll(AnimacaoTremVerde, AnimacaoTremVermelho);
   }
   
-  /* ***************************************************************
-  * Metodo: iniciarMovimento
-  * Funcao: Inicia a animacao dos trens e desabilita os botoes de direcao.
-  * Parametros: event - Evento associado ao clique no botão de iniciar.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: iniciarMovimento
+* Funcao: Inicia a animacao dos trens e desabilita os botoes de direcao.
+* Parametros: event - Evento associado ao clique no botão de iniciar.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void iniciarMovimento(ActionEvent event) {
     cimaParaBaixo.setDisable(true);
@@ -121,12 +121,12 @@ public class MainController implements Initializable {
     timeline.play();
   }
   
-  /* ***************************************************************
-  * Metodo: resetarMovimento
-  * Funcao: Reseta a animacao dos trens e habilita os botoes de direcao.
-  * Parametros: e - Evento associado ao clique no botao de resetar.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: resetarMovimento
+* Funcao: Reseta a animacao dos trens e habilita os botoes de direcao.
+* Parametros: e - Evento associado ao clique no botao de resetar.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void resetarMovimento(ActionEvent e) {
     cimaParaBaixo.setDisable(false);
@@ -142,12 +142,12 @@ public class MainController implements Initializable {
 
   }
   
-  /* ***************************************************************
-  * Metodo: posicao1
-  * Funcao: Define a posição dos trens e o movimento para a posicao 1.
-  * Parametros: e - Evento associado ao clique no botão de posicao 1.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: posicao1
+* Funcao: Define a posição dos trens e o movimento para a posicao 1.
+* Parametros: e - Evento associado ao clique no botão de posicao 1.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void posicao1(ActionEvent e){
     baixoParaCima.setSelected(false);
@@ -166,12 +166,12 @@ public class MainController implements Initializable {
     
   }
   
-  /* ***************************************************************
-  * Metodo: posicao2
-  * Funcao: Define a posição dos trens e o movimento para a posicao 2.
-  * Parametros: e - Evento associado ao clique no botão de posicao 2.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: posicao2
+* Funcao: Define a posição dos trens e o movimento para a posicao 2.
+* Parametros: e - Evento associado ao clique no botão de posicao 2.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void posicao2(ActionEvent e){
     cimaParaBaixo.setSelected(false);
@@ -190,12 +190,12 @@ public class MainController implements Initializable {
     
   }
   
-  /* ***************************************************************
-  * Metodo: posicao3
-  * Funcao: Define a posição dos trens e o movimento para a posicao 3.
-  * Parametros: e - Evento associado ao clique no botão de posicao 3.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: posicao3
+* Funcao: Define a posição dos trens e o movimento para a posicao 3.
+* Parametros: e - Evento associado ao clique no botão de posicao 3.
+* Retorno: Sem retorno.
+**************************************************************** */
   @FXML
   public void posicao3(ActionEvent e){
     cimaParaBaixo.setSelected(false);
@@ -215,12 +215,12 @@ public class MainController implements Initializable {
     }
   }
   
-  /* ***************************************************************
-  * Metodo: posicao4
-  * Funcao: Define a posição dos trens e o movimento para a posicao 4.
-  * Parametros: e - Evento associado ao clique no botão de posicao 4.
-  * Retorno: Sem retorno.
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: posicao4
+* Funcao: Define a posição dos trens e o movimento para a posicao 4.
+* Parametros: e - Evento associado ao clique no botão de posicao 4.
+* Retorno: Sem retorno.
+*************************************************************** */
   @FXML
   public void posicao4(ActionEvent e){
     cimaParaBaixo.setSelected(false);
@@ -240,14 +240,14 @@ public class MainController implements Initializable {
     }
   }
   
-  /* ***************************************************************
-  * Metodo: initialize
-  * Funcao: esta funcao inicia alguns atributos dos trens, bem como
-  	    velocidade default dos trens, coordenadas e movimento
-  	    previamente selecionado que realizara
-  * Parametros: padrao do java
-  * Retorno: sem retorno
-  *************************************************************** */
+/* ***************************************************************
+* Metodo: initialize
+* Funcao: esta funcao inicia alguns atributos dos trens, bem como
+  	  velocidade default dos trens, coordenadas e movimento
+  	  previamente selecionado que realizara
+* Parametros: padrao do java
+* Retorno: sem retorno
+*************************************************************** */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
     velocidadeDireito.setValue(5);
