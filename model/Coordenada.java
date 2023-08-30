@@ -5,8 +5,8 @@
 * Ultima alteracao.: 29/08/2023
 * Nome.............: Coordenada
 * Funcao...........: Esta classe tem a funcao de criar objetos 
-		     para representar as coordenadas iniciais 
-		     do trem.
+		                 para representar as coordenadas iniciais 
+		                 do trem.
 *************************************************************** */
 package model;
 
@@ -22,7 +22,7 @@ public class Coordenada {
 /* ***************************************************************
 * Metodo: getCoordenadaX
 * Funcao: Esta funcao retorna a coordenada X do conjunto (x,y) que 
-	  compoe o objeto coordenada.
+	        compoe o objeto coordenada.
 * Parametros: sem parametros
 * Retorno: retorna a coordenada x de tipo inteiro.
 *************************************************************** */
@@ -33,7 +33,7 @@ public class Coordenada {
 /* ***************************************************************
 * Metodo: getCoordenadaY
 * Funcao: Esta funcao retorna a coordenada Y do conjunto (x,y) que 
-	  compoe o objeto coordenada.
+	        compoe o objeto coordenada.
 * Parametros: sem parametros
 * Retorno: retorna a coordenada y de tipo inteiro.
 *************************************************************** */

@@ -5,7 +5,7 @@
 * Ultima alteracao.: 29/08/2023
 * Nome.............: MainController
 * Funcao...........: Manipula os objetos da interface gráfica 
-		     e das classes modelo.
+		                 e das classes modelo.
 *************************************************************** */
 
 package controller;
@@ -243,8 +243,8 @@ public class MainController implements Initializable {
 /* ***************************************************************
 * Metodo: initialize
 * Funcao: esta funcao inicia alguns atributos dos trens, bem como
-  	  velocidade default dos trens, coordenadas e movimento
-  	  previamente selecionado que realizara
+  	      velocidade default dos trens, coordenadas e movimento
+  	      previamente selecionado que realizara
 * Parametros: padrao do java
 * Retorno: sem retorno
 *************************************************************** */

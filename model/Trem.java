@@ -5,9 +5,9 @@
 * Ultima alteracao.: 29/08/2023
 * Nome.............: Trem
 * Funcao...........: esta classe tem a funcao de criar o objeto
-		     do tipo Trem que, estando associado a uma
-		     imagem, alterara sua posicao e velocidade
-		     com que se movimenta.
+		                 do tipo Trem que, estando associado a uma
+		                 imagem, alterara sua posicao e velocidade
+		                 com que se movimenta.
 *************************************************************** */
 package model;
 public class Trem {
@@ -29,7 +29,7 @@ public class Trem {
 /* ***************************************************************
 * Metodo: movimento
 * Funcao: esta funcao incrementa as coordenadas (X,Y) do trem para 
-	  que ele se movimente sobre os trilhos corretamente.
+	        que ele se movimente sobre os trilhos corretamente.
 * Parametros: tipo de movimento a ser realizado
 * Retorno: sem retorno
 *************************************************************** */
